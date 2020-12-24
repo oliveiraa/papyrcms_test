@@ -1,0 +1,110 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin sectionStyle {
+
+  padding: 10rem 10rem;
+  max-width: $max-section-width;
+  margin: 0 auto;
+  background-color: $color-grey-light;
+
+  @include respond(tab-land) {
+    padding: 7rem 5rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(phone) {
+    padding: 5rem 2rem;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin inputLabelStyle {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  font-style: italic;
+  margin-left: .2rem;
+}
+
+@mixin inputBorderStyle {
+  border-top: .2rem solid $color-grey;
+  border-left: .2rem solid $color-grey;
+  border-bottom: .2rem solid $color-grey-light;
+  border-right: .2rem solid $color-grey-light;
+  border-radius: .7rem;
+}
+
+@mixin contentStyle {
+  padding-top: 1rem;
+  letter-spacing: .1rem;
+
+  p:not(:last-of-type) {
+    margin-bottom: 3rem;
+  }
+
+  img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  ul, ol {
+    margin-left: 4rem;
+
+    li {
+
+    }
+  }
+
+  table {
+    margin: 0 auto;
+    min-width: 90%;
+
+    tbody tr td {
+
+    }
+  }
+
+  pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 3rem;
+    background-color: $color-grey-light-2;
+    padding: 1rem 2rem;
+  }
+}
+
+// max-width: px / 16
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content }; // 600px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) { @content }; // 900px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) { @content }; // 1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) { @content }; // 1800px
+  }
+}

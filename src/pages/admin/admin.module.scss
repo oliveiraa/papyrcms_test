@@ -1,0 +1,21 @@
+@import 'src/sass/abstracts/_mixins.scss';
+@import 'src/sass/abstracts/_variables.scss';
+
+.main {
+  background-color: $color-grey-light;
+  padding: 5rem 15vw;
+
+  @include respond(tab-port) {
+    padding: 5rem 5vw;
+    padding-bottom: 10rem;
+  }
+
+  @include respond(phone) {
+    padding: 5rem 3vw;
+    padding-bottom: 10rem;
+  }
+}
+
+.title {
+  border-bottom: 0.1rem solid $color-grey;
+}
