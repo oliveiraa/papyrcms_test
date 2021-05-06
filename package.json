@@ -41,7 +41,7 @@
     "react-render-html": "^0.6.0",
     "react-stripe-elements": "^6.1.2",
     "react-tinymce": "^0.7.0",
-    "sanitize-html": "^1.27.4",
+    "sanitize-html": "^2.3.2",
     "sequelize": "^6.3.5",
     "sqlite3": "^5.0.0",
     "stripe": "^8.96.0",
