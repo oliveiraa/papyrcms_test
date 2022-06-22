@@ -43,7 +43,7 @@
     "react-tinymce": "^0.7.0",
     "sanitize-html": "^1.27.4",
     "sequelize": "^6.3.5",
-    "sqlite3": "^5.0.0",
+    "sqlite3": "^5.0.3",
     "stripe": "^8.96.0",
     "swagger-ui-react": "^3.33.0",
     "tedious": "^9.2.1"
