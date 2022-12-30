@@ -45,7 +45,7 @@
     "sequelize": "^6.3.5",
     "sqlite3": "^5.0.0",
     "stripe": "^8.96.0",
-    "swagger-ui-react": "^3.33.0",
+    "swagger-ui-react": "^3.52.5",
     "tedious": "^9.2.1"
   },
   "devDependencies": {
